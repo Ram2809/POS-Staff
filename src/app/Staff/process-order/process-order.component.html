@@ -1,0 +1,51 @@
+<div class="container fluid mb-3">
+    <h3 style="text-align: center;"><b><i>Process Order</i></b></h3>
+    <form [formGroup]="ProcessOrderForm" (ngSubmit)="processOrder()">
+        <table class="table table-hover">
+            <tr>
+                <th>Customer Name</th>
+                <td>{{orderDetail.customer.name}}</td>
+            </tr>
+            <tr>
+                <th>Phone Number</th><td>{{orderDetail.customer.phoneNumber}}</td>
+            </tr>
+            <tr>
+                <th>Email</th><td>{{orderDetail.customer.email}}</td>
+            </tr>
+            <tr>
+                <th>Address Line</th>
+                <td>{{orderDetail.address.addressLine}}</td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td>{{orderDetail.address.city}}</td>
+            </tr>
+            <tr>
+                <th>Pincode</th>
+                <td>{{orderDetail.address.pinCode}}</td>
+            </tr>
+            <tr>
+                <th>Discount Percent</th>
+                <td>{{orderDetail.discount}}</td>
+            </tr>
+            <tr>
+                <th>Total Amount</th>
+                <td>{{orderDetail.totalPrice | number:'1.2-3'}}</td>
+            </tr>
+            <tr>
+                <th>Mode of Payment</th>
+                <td><select class="custom-select" name="modeOfPayment" formControlName="modeOfPayment">
+                    <option value="" selected>Select the payment option</option>
+                    <option>Cash</option>
+                    <option>Credit card</option>
+                    <option>Debit card</option>
+                    <option>Net banking</option>
+                    <option>UPI</option>
+                    <option>Sodexo food card</option>
+                </select></td>
+            </tr>
+        </table>
+        <button style="margin-left: 12cm" class="btn btn-info">Proceed</button>&nbsp;&nbsp;<button class="btn btn-danger" type="reset">Cancel</button><br><br>
+        <button style="margin-left: 12cm" class="btn btn-info" type="submit">Generate Receipt</button>
+    </form>
+</div>

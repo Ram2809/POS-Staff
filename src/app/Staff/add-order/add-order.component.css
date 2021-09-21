@@ -1,0 +1,14 @@
+#btn1
+{
+    margin-left: 25cm;
+}
+caption{
+    caption-side: top;
+    text-align: center;
+    color: blue;
+    font-size: 25px;
+}
+#addOrder{
+    height:100%;
+    width:80%
+}
